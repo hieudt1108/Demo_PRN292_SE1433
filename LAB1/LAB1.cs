@@ -12,7 +12,15 @@ namespace LAB1
 
 
         static void Main(string[] args)
+
+
+
+
         {
+
+            Console.WriteLine("update chưa ");
+
+
             Console.WriteLine("1.  Lesson 1");
             Console.WriteLine("2.  Lesson 2");
             Console.WriteLine("3.  Lesson 3");
