@@ -1,0 +1,6 @@
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppOOP\bin\Debug\ConsoleAppOOP.exe
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppOOP\bin\Debug\ConsoleAppOOP.pdb
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppOOP\obj\Debug\ConsoleAppOOP.csprojAssemblyReference.cache
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppOOP\obj\Debug\ConsoleAppOOP.csproj.CoreCompileInputs.cache
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppOOP\obj\Debug\ConsoleAppOOP.exe
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppOOP\obj\Debug\ConsoleAppOOP.pdb

@@ -1,0 +1,6 @@
+D:\Visual\Project\Demo_PRN292_SE1433\LAB1\bin\Debug\LAB1.exe
+D:\Visual\Project\Demo_PRN292_SE1433\LAB1\bin\Debug\LAB1.pdb
+D:\Visual\Project\Demo_PRN292_SE1433\LAB1\obj\Debug\LAB1.csprojAssemblyReference.cache
+D:\Visual\Project\Demo_PRN292_SE1433\LAB1\obj\Debug\LAB1.csproj.CoreCompileInputs.cache
+D:\Visual\Project\Demo_PRN292_SE1433\LAB1\obj\Debug\LAB1.exe
+D:\Visual\Project\Demo_PRN292_SE1433\LAB1\obj\Debug\LAB1.pdb

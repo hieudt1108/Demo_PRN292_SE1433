@@ -1,0 +1,6 @@
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppLanguage\bin\Debug\ConsoleAppLanguage.exe
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppLanguage\bin\Debug\ConsoleAppLanguage.pdb
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppLanguage\obj\Debug\ConsoleAppLanguage.csproj.CoreCompileInputs.cache
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppLanguage\obj\Debug\ConsoleAppLanguage.exe
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppLanguage\obj\Debug\ConsoleAppLanguage.pdb
+D:\Visual\Project\Demo_PRN292_SE1433\ConsoleAppLanguage\obj\Debug\ConsoleAppLanguage.csprojAssemblyReference.cache
