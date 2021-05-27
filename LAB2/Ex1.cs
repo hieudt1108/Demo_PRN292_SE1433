@@ -7,12 +7,12 @@ namespace LAB2
 {
     class Ex1
     {
-        public static void printInfor()
+        public static void RunEx1()
         {
             Console.Write("Enter width : ");
-            double width = Convert.ToInt32(Console.ReadLine());
+            double width = Validate.inputDouble();
             Console.Write("Enter length : ");
-            double length = Convert.ToInt32(Console.ReadLine());
+            double length = Validate.inputDouble();
 
             HinhChuNhat m = new HinhChuNhat(length, width);
 

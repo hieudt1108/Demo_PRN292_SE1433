@@ -20,12 +20,14 @@ namespace LAB2
                 switch (n)
                 {
                     case 1:
-                        Ex1.printInfor();
+                        Ex1.RunEx1();
                         break;
                     case 2:
                         Ex2.RunEx2();
                         break;
-
+                    case 3:
+                        TestMain.MainEx3();
+                        break;
                 }
             }
         }

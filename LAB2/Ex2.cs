@@ -36,16 +36,23 @@ namespace LAB2
             Console.WriteLine("8. Who have the max salary?");
             Console.WriteLine("9. Sort the list of players by ascending shirt number");
             Console.WriteLine("10.Sort descending salaries of experienced coaches =3 ");
+            Console.WriteLine("11.Exit ");
             while (true)
             {
                 Console.Write("Enter choice : ");
-                int choice = Validate.inputIntChoice(1, 10);
+                int choice = Validate.inputIntChoice(1, 11);
 
                 switch (choice)
                 {
                     case 1:
                         Console.Write("Enter code : ");
                         int code = Validate.inputInt();
+                        if (!Validate.checkDuplicateCodeEx2(listPlayer, listCoach, code))
+                        {
+                            Console.WriteLine("Duplicate code !!");
+                            break;
+                        }
+
                         Console.Write("Enter name :");
                         string name = Validate.inputString();
                         Console.Write("Enter address : ");
@@ -54,6 +61,12 @@ namespace LAB2
                         string position = Validate.inputString();
                         Console.Write("Enter shirt number : ");
                         int number = Validate.inputInt();
+
+                        if (!Validate.checkDuplicateShirtNumber(listPlayer, number))
+                        {
+                            Console.WriteLine("Duplicate ShirtNumber !!");
+                            break;
+                        }
                         Console.Write("Enter salary : ");
                         double salary = Validate.inputDouble();
 
@@ -64,6 +77,11 @@ namespace LAB2
                     case 2:
                         Console.Write("Enter code : ");
                         int code1 = Validate.inputInt();
+                        if (!Validate.checkDuplicateCodeEx2(listPlayer, listCoach, code1))
+                        {
+                            Console.WriteLine("Duplicate code !!");
+                            break;
+                        }
                         Console.Write("Enter name :");
                         string name1 = Validate.inputString();
                         Console.Write("Enter address : ");
@@ -77,24 +95,32 @@ namespace LAB2
 
 
                         m.addCoaches(listCoach, code1, name1, address1, number1, position1, salary1);
-
+                        Console.WriteLine("Add successful ! ");
                         break;
                     case 3:
+                        Console.WriteLine("Code\tName\t\tAddress\tPosition\tSalary\tShirtNumber");
                         m.showPlayer(listPlayer);
                         break;
                     case 4:
+                        Console.WriteLine("Code\tName\t\tAddress\tPosition\tSalary\tYearOfExperience");
                         m.showCoach(listCoach);
                         break;
                     case 5:
                         Console.Write("Enter player code : ");
                         int playerCode = Validate.inputInt();
-                        Console.Write("Enter option : ");
-                        int option = Validate.inputIntChoice(0, 1);
-                        Console.WriteLine("Enter new shirtNumber : ");
+                        Console.Write("Enter new shirtNumber : ");
                         int newNumber = Validate.inputInt();
+                        if (!Validate.checkDuplicateShirtNumber(listPlayer, newNumber))
+                        {
+                            Console.WriteLine("Duplicate ShirtNumber !!");
+                            break;
+                        }
                         Console.WriteLine("Enter new Salary");
                         double newSalary = Validate.inputDouble();
+                        Console.Write("Enter option : ");
+                        int option = Validate.inputIntChoice(0, 1);
                         m.changePlayer(listPlayer, playerCode, option, newNumber, newSalary);
+                        Console.WriteLine("Successful !!!");
                         break;
                     case 6:
                         m.countCoach(listCoach);
@@ -111,15 +137,14 @@ namespace LAB2
                     case 10:
                         m.sortCoach(listCoach);
                         break;
-
-
-
+                    case 11:
+                        return;
 
                 }
-                Console.ReadKey();
+
             }
 
-
+            Console.ReadKey();
         }
 
 

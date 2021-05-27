@@ -89,7 +89,7 @@ namespace LAB2
 
         public void sortCoach(List<Coach> listCoach)
         {
-            var sortCoach = (List<Coach>)listCoach.Where(l => l.YearEx == 3).OrderByDescending(l => l.Salary).ToList();
+            var sortCoach = listCoach.Where(l => l.YearEx == 3).OrderByDescending(l => l.Salary).ToList();
             int index = 0;
 
             List<Coach> listCoach2 = listCoach;

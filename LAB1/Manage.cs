@@ -82,11 +82,11 @@ namespace LAB1
         {
             Console.WriteLine("First 4 perfect numbers : ");
             int count = 0;
-            int n = 6;
+            long n = 6;
             do
             {
-                int sum = 0;
-                for (int i = 1; i < n; i++)
+                long sum = 0;
+                for (long i = 1; i < n; i++)
                 {
                     if (n % i == 0)
                     {
@@ -106,7 +106,7 @@ namespace LAB1
                     count++;
                 }
                 n++;
-            } while (count < 4);
+            } while (count < 5);
         }
 
         public static void Ex5()

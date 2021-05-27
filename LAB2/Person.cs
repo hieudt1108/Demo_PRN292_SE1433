@@ -35,7 +35,7 @@ namespace LAB2
 
         public string ToString()
         {
-            return _code + "\t" + _name + "\t" + _address + "\t" + _position + "\t" + _salary;
+            return _code + "\t" + _name + "\t" + _address + "\t" + _position + "\t\t" + _salary;
         }
     }
 }
