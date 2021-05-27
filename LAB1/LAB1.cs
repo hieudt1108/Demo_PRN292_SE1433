@@ -18,9 +18,6 @@ namespace LAB1
 
         {
 
-            Console.WriteLine("update chưa ");
-            Console.WriteLine("update rồi ");
-
 
             Console.WriteLine("1.  Lesson 1");
             Console.WriteLine("2.  Lesson 2");
