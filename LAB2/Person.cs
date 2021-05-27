@@ -8,7 +8,7 @@ namespace LAB2
     class Person
     {
 
-        private string _code;
+        private int _code;
         private string _name;
         private string _address;
         private string _position;
@@ -18,7 +18,7 @@ namespace LAB2
         {
         }
 
-        public Person(string code, string name, string address, string position, double salary)
+        public Person(int code, string name, string address, string position, double salary)
         {
             Code = code;
             Name = name;
@@ -27,7 +27,7 @@ namespace LAB2
             Salary = salary;
         }
 
-        public string Code { get => _code; set => _code = value; }
+        public int Code { get => _code; set => _code = value; }
         public string Name { get => _name; set => _name = value; }
         public string Address { get => _address; set => _address = value; }
         public string Position { get => _position; set => _position = value; }

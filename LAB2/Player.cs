@@ -13,7 +13,7 @@ namespace LAB2
         {
         }
 
-        public Player(string code, string name, string address, string position, double salary, int shirtNumber) : base(code, name,  address,  position, salary)
+        public Player(int code, string name, string address, string position, double salary, int shirtNumber) : base(code, name,  address,  position, salary)
         {
             this.ShirtNumber = shirtNumber;
 

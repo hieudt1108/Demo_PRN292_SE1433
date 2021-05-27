@@ -61,5 +61,28 @@ namespace LAB2
                 }
             }
         }
+
+        public static int inputIntChoice(int min , int max)
+        {
+            while (true)
+            {
+                try
+                {
+                    int n = Convert.ToInt32(Console.ReadLine());
+                    if(n<min || n > max)
+                    {
+                        throw new Exception();
+                    }
+                    return n;
+                }
+                catch (Exception e)
+                {
+
+                    Console.Write("Enter again : ");
+                }
+            }
+        }
+
+
     }
 }

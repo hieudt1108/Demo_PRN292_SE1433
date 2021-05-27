@@ -13,7 +13,7 @@ namespace LAB2
         {
         }
 
-        public Coach(string code, string name, string address, string position, double salary, int yearEx) : base(code, name, address,  position,  salary)
+        public Coach(int code, string name, string address, string position, double salary, int yearEx) : base(code, name, address,  position,  salary)
         {
             this.YearEx = yearEx;
         }
