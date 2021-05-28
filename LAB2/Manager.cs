@@ -30,7 +30,7 @@ namespace LAB2
                 if (item.SCoefficient < 3)
                 {
                     string[] arrListS = item.Name.Split(' ');
-                    Console.WriteLine(arrListS[0]+"\t"+ arrListS[arrListS.Length - 1]);
+                    Console.WriteLine(arrListS[0] + "\t\t" + arrListS[arrListS.Length - 1]);
                 }
             }
         }
@@ -59,7 +59,7 @@ namespace LAB2
 
             Console.WriteLine("Teacher part time ");
 
-            Console.WriteLine("Code\tName\tSlot");
+            Console.WriteLine("Code\tName\t\tSlot");
             foreach (var item in listP)
             {
                 Console.WriteLine(item.show());
@@ -89,12 +89,12 @@ namespace LAB2
 
             Console.WriteLine($"Highest salary : {maxSalary}  ");
 
-            Console.WriteLine("Code\tName\t\tSalary ");
+            Console.WriteLine("Code\tName\t\t\tSalary ");
             foreach (var item in listF)
             {
                 if (item.getSalary() == maxSalary)
                 {
-                    Console.WriteLine(item.Code + item.Name + maxSalary);
+                    Console.WriteLine(item.Code + "\t" + item.Name + "\t" + maxSalary);
                 }
             }
 
@@ -112,7 +112,7 @@ namespace LAB2
         public void showTeacherStartT(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP)
         {
             Console.WriteLine("Teacher start with 'T' ");
-            Console.WriteLine("Name\tSalary");
+            Console.WriteLine("Name\t\t\tSalary");
 
             foreach (var item in listF)
             {

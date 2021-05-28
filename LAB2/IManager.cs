@@ -14,6 +14,6 @@ namespace LAB2
         int totalParttime(List<ParttimeTeacher> listP);
         void sortTeacher(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP);
         void showTeacherStartT(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP);
-        void displayList();
+        void displayList(List<FulltimeTeacher> listF);
     }
 }

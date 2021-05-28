@@ -14,6 +14,19 @@ namespace LAB2
 
             List<FulltimeTeacher> listF = new List<FulltimeTeacher>();
             List<ParttimeTeacher> listP = new List<ParttimeTeacher>();
+            listF.Add(new FulltimeTeacher("1", "Doan Trung Hieu1", 1));
+            listF.Add(new FulltimeTeacher("2", "Doan Trung Hieu2", 1));
+            listF.Add(new FulltimeTeacher("3", "Doan Trung Hieu3", 2));
+            listF.Add(new FulltimeTeacher("4", "Doan Trung Hieu4", 3));
+            listF.Add(new FulltimeTeacher("5", "Doan Trung Hieu5", 5));
+            listF.Add(new FulltimeTeacher("6", "Doan Trung Hieu6", 5));
+
+            listP.Add(new ParttimeTeacher("7", "Doan Trung THieu7", 2));
+            listP.Add(new ParttimeTeacher("8", "Doan Trung THieu7", 4));
+            listP.Add(new ParttimeTeacher("9", "Doan Trung Hieu7", 6));
+            listP.Add(new ParttimeTeacher("10", "Doan Trung Hieu7",8));
+            listP.Add(new ParttimeTeacher("11", "Doan Trung Hieu7", 10));
+            listP.Add(new ParttimeTeacher("12", "Doan Trung Hieu7", 12));
 
 
             Console.WriteLine("1. Import and display a list of Teachers ");
@@ -64,13 +77,13 @@ namespace LAB2
                         m.importAndDisplay(listF, listP, code, name, salaryC, slot, option);
                         break;
                     case 2:
-                        m.showHighestSalary(listF,listP);
+                        m.showHighestSalary(listF, listP);
                         break;
                     case 3:
-                        Console.WriteLine("Number of parttime teachers have slot >10 : "+ m.countTeacher(listP) );
+                        Console.WriteLine("Number of parttime teachers have slot >10 : " + m.countTeacher(listP));
                         break;
                     case 4:
-                        Console.WriteLine("Total number of  parttime teacher's slots : "+ m.totalParttime(listP));
+                        Console.WriteLine("Total number of  parttime teacher's slots : " + m.totalParttime(listP));
                         break;
                     case 5:
                         m.sortTeacher(listF, listP);

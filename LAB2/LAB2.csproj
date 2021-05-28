@@ -58,6 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Teacher.cs" />
+    <Compile Include="TeacherSalary.cs" />
     <Compile Include="TestMain.cs" />
     <Compile Include="TestMainEx4.cs" />
     <Compile Include="Validate.cs" />
