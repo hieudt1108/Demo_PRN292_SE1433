@@ -16,8 +16,8 @@ namespace LAB2
             listE.Add(new Employee("1", "Doan Trung Hieu1", DateTime.Parse("08/11/2000"), "Male", 5, 3.2));
             listE.Add(new Employee("2", "Doan Trung Hieu1", DateTime.Parse("08/11/2000"), "Male", 6, 2.2));
             listE.Add(new Employee("3", "Doan Trung Hieu2", DateTime.Parse("08/11/2000"), "Male", 2, 2.2));
-            listE.Add(new Employee("4", "Doan Trung Hieu3", DateTime.Parse("08/11/2000"), "Female", 0, 2.2));
-            listE.Add(new Employee("5", "Doan Trung Hieu4", DateTime.Parse("08/11/2000"), "Male", 2, 1.2));
+            listE.Add(new Employee("4", "Doan Trung Hieu3", DateTime.Parse("08/11/1988"), "Female", 0, 2.2));
+            listE.Add(new Employee("5", "Doan Trung Hieu4", DateTime.Parse("08/11/1970"), "Male", 2, 1.2));
 
 
 
@@ -72,6 +72,7 @@ namespace LAB2
                         m.showByName(name);
                         break;
                     case 8:
+                        m.updateSalary();
                         break;
                     case 9:
                         return;

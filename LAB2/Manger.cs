@@ -20,7 +20,7 @@ namespace LAB2
             int count = 0;
             foreach (var item in listE)
             {
-                if(item.Gender.Equals("Female")&&item.NumberChild==0)
+                if (item.Gender.Equals("Female") && item.NumberChild == 0)
                 {
                     count++;
                 }
@@ -57,15 +57,15 @@ namespace LAB2
                 Console.Write("Enter date of birth follow MM-dd-yyyy  or MM/dd/yyyy: ");
                 DateTime dob = Validate.inputDob();
                 Console.Write("Enter 1 for male or 0 for female : ");
-                int choice= Validate.inputIntChoice(0, 1);
+                int choice = Validate.inputIntChoice(0, 1);
                 string gender;
-                if(choice == 1)
+                if (choice == 1)
                 {
-                    gender = "Female";
+                    gender = "Male";
                 }
                 else
                 {
-                    gender = "Male";
+                    gender = "Female";
                 }
                 Console.Write("Enter number of children : ");
                 int child = Validate.inputInt();
@@ -73,7 +73,7 @@ namespace LAB2
                 double salary = Validate.inputDouble();
                 listE.Add(new Employee(code, name, dob, gender, child, salary));
             }
-          
+
         }
 
         public void showByName(string name)
@@ -109,7 +109,7 @@ namespace LAB2
             Console.WriteLine("Code\tname\t\t\tdate of birth\t\tgender\t\tnumber of children\t\tsalary");
             foreach (var item in listE)
             {
-                if(item.NumberChild<n)
+                if (item.NumberChild < n)
                 {
                     Console.WriteLine(item.show());
                 }
@@ -140,7 +140,33 @@ namespace LAB2
 
         public void updateSalary()
         {
-            throw new NotImplementedException();
+            List<Employee> listUpdate = listE;
+            DateTime now = DateTime.Today;
+            int age;
+            foreach (var item in listUpdate)
+            {
+                age = (Int32.Parse(DateTime.Today.ToString("yyyyMMdd")) - Int32.Parse(item.Dob.ToString("yyyyMMdd"))) / 10000;
+
+                if (age < 30)
+                {
+                    item.Salary = item.Salary + (item.Salary * (0.05));
+                }
+                else if (age >= 30 && age < 40)
+                {
+                    item.Salary = item.Salary + (item.Salary * (0.1));
+                }
+                else
+                {
+                    item.Salary = item.Salary + (item.Salary * (0.15));
+                }
+            }
+            Console.WriteLine("Code\tname\t\t\tdate of birth\t\tgender\t\tnumber of children\t\tsalary");
+            foreach (var item in listUpdate)
+            {
+                Console.WriteLine(item.show());
+            }
+
+
         }
     }
 }

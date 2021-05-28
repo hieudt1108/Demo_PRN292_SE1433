@@ -8,6 +8,29 @@ namespace LAB2
     class Validate
     {
 
+        public static bool checkDuplicateCodeEx4(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP, string code)
+        {
+
+            foreach (var item in listF)
+            {
+                if (item.Code.Equals(code))
+                {
+                    return false;
+                }
+            }
+            foreach (var item in listP)
+            {
+                if (item.Code.Equals(code))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+
+        }
+
+
         public static DateTime inputDob()
         {
             DateTime dt;

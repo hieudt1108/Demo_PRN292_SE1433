@@ -28,6 +28,9 @@ namespace LAB2
                     case 3:
                         TestMain.MainEx3();
                         break;
+                    case 4:
+                        TestMainEx4.MainEx4();
+                        break;
                 }
             }
         }
