@@ -7,153 +7,217 @@ namespace LAB2
 {
     class Manager : IManager
     {
-        public int countTeacher(List<ParttimeTeacher> listP)
+        public int countTeacher(List<Teacher> listT)
         {
             int count = 0;
-            foreach (var item in listP)
+            foreach (var item in listT)
             {
-                if (item.Slot > 10)
+                if (typeof(ParttimeTeacher).IsInstanceOfType(item))
                 {
-                    count++;
+                    ParttimeTeacher a = (ParttimeTeacher)item;
+                    if(a.Slot> 10)
+                    {
+                        count++;
+                    }
                 }
             }
             return count;
         }
 
-        public void displayList(List<FulltimeTeacher> listF)
+        public void displayList(List<Teacher> listT)
         {
             Console.WriteLine("List of fulltime teachers with the salary coefficient < 3");
 
             Console.WriteLine("LastName\tFirstName");
-            foreach (var item in listF)
+            foreach (var item in listT)
             {
-                if (item.SCoefficient < 3)
+                if (typeof(FulltimeTeacher).IsInstanceOfType(item))
                 {
-                    string[] arrListS = item.Name.Split(' ');
-                    Console.WriteLine(arrListS[0] + "\t\t" + arrListS[arrListS.Length - 1]);
+                    FulltimeTeacher a = (FulltimeTeacher)item;
+                    if (a.SCoefficient < 3)
+                    {
+                        string[] arrListS = item.Name.Split(' ');
+                        Console.WriteLine(arrListS[0] + "\t\t" + arrListS[arrListS.Length - 1]);
+                    }
                 }
+                
             }
         }
 
-        public void importAndDisplay(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP, string code, string name, double salaryC, int slot, int option)
+        public void importAndDisplay(List<Teacher> listT, string code, string name, double salaryC, int slot, int option)
         {
+
+         
             if (option == 1)
             {
-                listF.Add(new FulltimeTeacher(code, name, salaryC));
+                listT.Add(new FulltimeTeacher(code, name, salaryC));
                 Console.WriteLine("Add done !!");
             }
             else
             {
-                listP.Add(new ParttimeTeacher(code, name, slot));
+                listT.Add(new ParttimeTeacher(code, name, slot));
                 Console.WriteLine("Add done !!");
+            }
+
+            
+
+            
+
+            Console.WriteLine("Teacher part time ");
+
+            Console.WriteLine("Code\tName\t\t\tSlot");
+            foreach (var item in listT)
+            {
+                if (typeof(ParttimeTeacher).IsInstanceOfType(item))
+                {
+                    ParttimeTeacher a = (ParttimeTeacher)item;
+                    Console.WriteLine(a.show());
+                }
             }
 
             Console.WriteLine("Teacher full time ");
 
-            Console.WriteLine("Code\tName\t\tSalary Coefficient");
-            foreach (var item in listF)
+            Console.WriteLine("Code\tName\t\tsCoefficient");
+            foreach (var item in listT)
             {
-                Console.WriteLine(item.show());
-            }
-
-
-            Console.WriteLine("Teacher part time ");
-
-            Console.WriteLine("Code\tName\t\tSlot");
-            foreach (var item in listP)
-            {
-                Console.WriteLine(item.show());
-            }
-
-        }
-
-        public void showHighestSalary(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP)
-        {
-
-            double maxSalary = 0;
-            foreach (var item in listF)
-            {
-                if (item.getSalary() > maxSalary)
+                if (typeof(FulltimeTeacher).IsInstanceOfType(item))
                 {
-                    maxSalary = item.getSalary();
+                    FulltimeTeacher a = (FulltimeTeacher)item;
+                    Console.WriteLine(a.show());
                 }
             }
 
-            foreach (var item in listP)
+
+        }
+
+        public void showHighestSalary(List<Teacher> listT)
+        {
+
+            double maxSalary = 0;
+            foreach (var item in listT)
             {
-                if (item.getSalary() > maxSalary)
+                if (typeof(ParttimeTeacher).IsInstanceOfType(item))
                 {
-                    maxSalary = item.getSalary();
+                    ParttimeTeacher a = (ParttimeTeacher)item;
+                    if (a.getSalary() > maxSalary)
+                    {
+                        maxSalary = a.getSalary();
+                    }
+                } 
+            }
+
+            foreach (var item in listT)
+            {
+                if (typeof(FulltimeTeacher).IsInstanceOfType(item))
+                {
+                    FulltimeTeacher a = (FulltimeTeacher)item;
+                    if (a.getSalary() > maxSalary)
+                    {
+                        maxSalary = a.getSalary();
+                    }
                 }
             }
 
             Console.WriteLine($"Highest salary : {maxSalary}  ");
 
             Console.WriteLine("Code\tName\t\t\tSalary ");
-            foreach (var item in listF)
+
+
+            foreach (var item in listT)
             {
-                if (item.getSalary() == maxSalary)
+                if (typeof(ParttimeTeacher).IsInstanceOfType(item))
                 {
-                    Console.WriteLine(item.Code + "\t" + item.Name + "\t" + maxSalary);
+                    ParttimeTeacher a = (ParttimeTeacher)item;
+                    if (a.getSalary() == maxSalary)
+                    {
+                        Console.WriteLine(item.Code + "\t" + item.Name + "\t" + maxSalary);
+                    }
                 }
             }
 
-            foreach (var item in listP)
+            foreach (var item in listT)
             {
-                if (item.getSalary() == maxSalary)
+                if (typeof(FulltimeTeacher).IsInstanceOfType(item))
                 {
-                    Console.WriteLine(item.Code + item.Name + maxSalary);
+                    FulltimeTeacher a = (FulltimeTeacher)item;
+                    if (a.getSalary() == maxSalary)
+                    {
+                        Console.WriteLine(item.Code + "\t" + item.Name + "\t" + maxSalary);
+                    }
                 }
             }
+          
 
 
         }
 
-        public void showTeacherStartT(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP)
+        public void showTeacherStartT(List<Teacher> listT)
         {
+            
+
+
             Console.WriteLine("Teacher start with 'T' ");
             Console.WriteLine("Name\t\t\tSalary");
 
-            foreach (var item in listF)
+            foreach (var item in listT)
             {
-                string[] arrListS = item.Name.Split(' ');
-                string name = arrListS[arrListS.Length - 1];
 
-                if (name.StartsWith("T"))
+                if (typeof(FulltimeTeacher).IsInstanceOfType(item))
                 {
-                    Console.WriteLine(item.Name + "\t" + item.getSalary());
+                    FulltimeTeacher a = (FulltimeTeacher)item;
+                    string[] arrListS = a.Name.Split(' ');
+                    string name = arrListS[arrListS.Length - 1];
+
+                    if (name.StartsWith("T"))
+                    {
+                        Console.WriteLine(a.Name + "\t" + a.getSalary());
+                    }
                 }
+                else
+                {
+                    
+                        ParttimeTeacher a = (ParttimeTeacher)item;
+                        string[] arrListS = a.Name.Split(' ');
+                        string name = arrListS[arrListS.Length - 1];
+
+                        if (name.StartsWith("T"))
+                        {
+                            Console.WriteLine(a.Name + "\t" + a.getSalary());
+                        }
+                    }
+                }
+
+
+                
             }
 
 
-            foreach (var item in listP)
-            {
-                string[] arrListS = item.Name.Split(' ');
-                string name = arrListS[arrListS.Length - 1];
-
-                if (name.StartsWith("T"))
-                {
-                    Console.WriteLine(item.Name + "\t" + item.getSalary());
-                }
-            }
+           
 
 
 
-        }
+        
 
-        public void sortTeacher(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP)
+        public void sortTeacher(List<Teacher> listT)
         {
             List<TeacherSalary> listS = new List<TeacherSalary>();
 
 
-            foreach (var item in listF)
+            foreach (var item in listT)
             {
-                listS.Add(new TeacherSalary(item.Code, item.Name, item.getSalary()));
+                if (typeof(FulltimeTeacher).IsInstanceOfType(item))
+                {
+                    FulltimeTeacher a = (FulltimeTeacher)item;
+                    listS.Add(new TeacherSalary(a.Code, a.Name, a.getSalary()));
+
+                }
+                else
+                {
+                    FulltimeTeacher a = (FulltimeTeacher)item;
+                    listS.Add(new TeacherSalary(a.Code, a.Name, a.getSalary()));
+                }
             }
-            foreach (var item in listP)
-            {
-                listS.Add(new TeacherSalary(item.Code, item.Name, item.getSalary()));
-            }
+          
 
             Console.WriteLine("List teacher increase by salary");
             List<TeacherSalary> sorted = listS.OrderBy(t => t.Salary).ToList();
@@ -165,13 +229,19 @@ namespace LAB2
 
         }
 
-        public int totalParttime(List<ParttimeTeacher> listP)
+        public int totalParttime(List<Teacher> listT)
         {
             int count = 0;
-            foreach (var item in listP)
+            
+            foreach (var item in listT)
             {
-                count += item.Slot;
+                if (typeof(ParttimeTeacher).IsInstanceOfType(item))
+                {
+                    ParttimeTeacher a = (ParttimeTeacher)item;
+                    count += a.Slot;
+                }
             }
+           
             return count;
         }
     }

@@ -31,5 +31,7 @@ namespace LAB2
         {
             return sCoefficient * 2000000;
         }
+
+      
     }
 }

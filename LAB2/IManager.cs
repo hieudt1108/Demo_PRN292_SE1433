@@ -8,12 +8,12 @@ namespace LAB2
     interface IManager
     {
 
-        void importAndDisplay(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP, string code, string name, double salaryC, int slot,int option);
-        void showHighestSalary(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP);
-        int countTeacher(List<ParttimeTeacher> listP);
-        int totalParttime(List<ParttimeTeacher> listP);
-        void sortTeacher(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP);
-        void showTeacherStartT(List<FulltimeTeacher> listF, List<ParttimeTeacher> listP);
-        void displayList(List<FulltimeTeacher> listF);
+        void importAndDisplay(List<Teacher> listT, string code, string name, double salaryC, int slot,int option);
+        void showHighestSalary(List<Teacher> listT);
+        int countTeacher(List<Teacher> listT);
+        int totalParttime(List<Teacher> listT);
+        void sortTeacher(List<Teacher> listT);
+        void showTeacherStartT(List<Teacher> listT);
+        void displayList(List<Teacher> listT);
     }
 }
